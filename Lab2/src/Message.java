@@ -1,7 +1,7 @@
 //Question 2
 public class Message {
 
-    private String sender,recipient,message;
+    private String sender,recipient,message="";
 
     public Message(String sender,String recipient)
     {
@@ -23,5 +23,14 @@ public class Message {
 
     public void setRecipient(String recipient){
         this.recipient = recipient;
+    }
+
+    public void append(String message){
+
+        this.message+= " " + message;
+    }
+
+    public String toString(){
+        return("From: " + getSender() + "\nTo: " + getRecipient() + "\nMessage: " + message);
     }
 }
