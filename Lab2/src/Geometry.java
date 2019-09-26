@@ -1,50 +1,55 @@
 public class Geometry {
-    private int xVal,yVal;
+    private double xVal,yVal;
 
     public Geometry(){
         this.xVal=0;
         this.yVal=0;
     }
 
-    public Geometry(int xVal,int yVal){
+    public Geometry(double xVal,double yVal){
         setxVal(xVal);
         setyVal(yVal);
 
     }
 
-    public int getxVal(){
+    public double getxVal(){
         return xVal;
     }
 
-    public int getyVal(){
+    public double getyVal(){
         return yVal;
     }
 
-    public void setxVal(int xVal){
+    public void setxVal(double xVal){
         this.xVal=xVal;
     }
 
-    public void setyVal(int yVal){
+    public void setyVal(double yVal){
         this.yVal=yVal;
     }
 
-    public int moveHorizontally(int xVal){
+    public void moveHorizontally(double xVal){
         this.xVal+=xVal;
-        return(this.xVal);
+
     }
 
-    public int moveVertically(int yVal){
+    public void moveVertically(double yVal){
         this.yVal+=yVal;
-        return(this.yVal);
+
     }
 
-    public String translate(int xVal,int yVal)
+    public void translate(double xVal,double yVal)
     {
+        moveHorizontally(xVal);
+        moveVertically(yVal);
 
-        return(Integer.toString(this.xVal+xVal) + "," + Integer.toString(this.yVal+yVal));
     }
 
-    public int distanceFromOrigin(){
-        return(Math.sqrt(Math.pow(Double.parseDouble(xVal),2)*Math.pow(Double.parseDouble(yVal),2)));
+    public double distanceFromOrigin(){
+        return(Math.sqrt((Math.pow(this.xVal,2))+(Math.pow(this.yVal,2))));
+    }
+
+    public String toString(){
+        return("Original Values: X-Coordinate: " + getxVal() + " Y-Coordinates: " + getyVal());
     }
 }

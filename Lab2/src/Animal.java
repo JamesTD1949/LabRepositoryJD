@@ -1,7 +1,7 @@
 public class Animal {
 
     private String type;
-    private String[] continents = new String[7];
+    private String[] continents;// = new String[7];
     private double weight;
     private int age;
 

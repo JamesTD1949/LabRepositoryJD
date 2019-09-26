@@ -3,7 +3,11 @@ public class AnimalApp {
 
         Animal Cheetah;
 
-        Cheetah = new Animal("Cheetah",null,26.0,6);
+        Cheetah = new Animal();
+
+        //String[] anim
+
+        Cheetah.Mutate("Cheetah",new String[] {"Asia","Africa"},26.0,6);
 
 
 
