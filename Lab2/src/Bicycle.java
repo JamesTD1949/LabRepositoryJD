@@ -39,4 +39,9 @@ public class Bicycle {
         public void setPrice(double price) {
             this.price = price;
         }
+
+        public String toString(){
+
+            return("Owner: " + getOwner() + "\nMake: " + getMake() + "\nPrice: £" + getPrice());
+        }
 }
