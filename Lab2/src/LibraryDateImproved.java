@@ -36,7 +36,7 @@ public class LibraryDateImproved {
 
         returnDate = new GregorianCalendar(returnYear, returnMonth, returnDay);
 
-        int days = Calendar.get(returnDate.get)
+        int days = returnDate.get(Calendar.DAY_OF_YEAR) - borrowDate.get(Calendar.DAY_OF_YEAR);
 
         if(borrowDate.compareTo(returnDate)<0 && borrowYear==returnYear)
         {
