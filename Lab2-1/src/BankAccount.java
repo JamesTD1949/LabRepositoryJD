@@ -5,10 +5,10 @@ public class BankAccount {
     private Person customer;
 
     public BankAccount(){
-        this.BankAccount(accnum, balance, customer);
+        this("unknown", 0.00, null);
     }
 
-    public void BankAccount( String accnum, double balance, Person customer)
+    public BankAccount( String accnum, double balance, Person customer)
     {
         setAccnum(accnum);
         setBalance(balance);
