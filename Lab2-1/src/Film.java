@@ -14,6 +14,7 @@ public class Film {
         setDirector(director);
         setDuration(duration);
 
+        //add +1 to number of films each time a film object is created
         numberOfFilms++;
     }
 
@@ -27,6 +28,10 @@ public class Film {
 
     public int getDuration() {
         return duration;
+    }
+
+    public static int getNumberOfFilms() {
+        return numberOfFilms;
     }
 
     public void setTitle(String title) {
