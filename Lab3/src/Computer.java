@@ -10,6 +10,10 @@ public class Computer implements IDable {
         memory = new Memory(memtype,memSize);
     }
 
+    public Computer() {
+
+    }
+
     public String  getId() {
         return id;
     }
@@ -33,7 +37,7 @@ public class Computer implements IDable {
     }
 
     public String toString() {
-        return "ID: " + getId() + "\nMake: " + getMake() + "\nMemory Details: " + memory.toString();
+        return "ID: " + getId() + "\nMake: " + getMake() + "\n\t\tMemory Details\n" + memory.toString();
     }
 
     public void setID(String id) {

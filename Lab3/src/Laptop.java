@@ -3,10 +3,15 @@ import javax.swing.*;
 public class Laptop extends Computer {
     private boolean touchScreen;
 
+
     public Laptop(String id, String make, String memtype, int memSize, boolean touchScreen)
     {
         super(id,make,memtype,memSize);
         setTouchScreen(touchScreen);
+    }
+
+    public Laptop() {
+        super();
     }
 
     public boolean isTouchScreen() {
@@ -21,8 +26,9 @@ public class Laptop extends Computer {
         return super.toString() + "\nTouchscreen: " + touchScreen;
     }
 
-    public static Laptop makeLaptop()
+    public  Laptop makeLaptop()
     {
+
         String id = JOptionPane.showInputDialog("Please enter the id of the laptop: ");
 
         String make = JOptionPane.showInputDialog("Please enter the make of the laptop: ");
@@ -35,16 +41,17 @@ public class Laptop extends Computer {
 
         String yesNo = JOptionPane.showInputDialog("Does your laptop have a touchscreen(Y or N): ");
 
-        if(yesNo.toUpperCase().charAt(0)=='Y')
-        {
-            boolean touchscreen = true;
+        boolean touch;
+
+        if(yesNo.toUpperCase().charAt(0)=='Y') {
+            touch = true;
         }
-        else
-        {
-            boolean touchscreen = false;
+        else {
+            touch = false;
         }
 
-        Laptop hp = new Laptop(id,make,memtype,memSize,touchScreen);
+
+        Laptop hp = new Laptop(id,make,memtype,memSize,touch);
 
         return hp;
     }

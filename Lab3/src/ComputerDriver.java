@@ -1,8 +1,12 @@
 public class ComputerDriver {
     public static void main(String[] args) {
 
-        Laptop hp = Laptop.makeLaptop();
+        Laptop hp = new Laptop();
 
-        hp.toString();
+        hp = hp.makeLaptop();
+
+
+
+        System.out.println(hp.toString());
     }
 }
